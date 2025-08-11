@@ -1,0 +1,383 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+html{
+    font-size: 1rem;
+    font-weight: 400;
+}
+body{
+    width: 100%;
+    font-family: "Source Sans 3", sans-serif;
+    color: black;
+}
+
+
+button{
+    background-color: rgb(120, 67, 233);
+    color: white;
+    border: none;
+}
+
+/* header section start from here */
+header{
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left_side{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 20px;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.left_side:hover{
+    color: rgb(120, 67, 233);
+    cursor: pointer;
+}
+.left_side h3{
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.right_side ul{
+    list-style-type: none;
+}
+
+.right_side ul li{
+    display: inline-block;
+    margin-left: 40px;
+}
+.right_side ul li a{
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgb(25, 24, 24);
+    transition: 0.3s all ease;
+}
+.right_side ul li a:hover{
+    color:rgb(120, 67, 233) ;
+}
+
+/* main start from here */
+
+.hero{
+    background-image: url(/media/bg\ hero.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+.hero h1{
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 160px 0 50px 0;
+}
+.hero p, .about_me_info p{
+    font-size: 20px;
+    color: rgb(51, 51, 51);
+    line-height: 35px;
+    font-weight: 500;
+    padding-bottom: 50px;
+}
+.hero button{
+    font-size: 18px;
+    padding: 16px 64px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+.hero button:hover{
+    transform: translateY(-5px);
+}
+
+.social{
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    padding: 10px;
+    /* width: 60px; */
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    position: absolute;
+    top: 25vh;
+    left: 0;
+}
+.social i{
+    font-size: 30px;
+    transition: all 0.2s ease;
+}
+.social i:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    color: rgb(120, 67, 233);
+}
+.chat_fixed{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    top: 80vh;
+    right: 30px;
+    background-color: rgb(120, 67, 233);
+    color: white;
+    border-radius: 100%;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.chat_fixed:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+/* about_me start from here */
+
+.about_me, .project, .contact{
+    padding: 140px 70px;
+}
+.about_me{
+    background-color: rgb(243, 243, 243);
+}
+
+.about_me_info, .pro_info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.section_title, .section_title_2, .section_title_3{
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.section_title::after, .section_title_2::after, .section_title_3::after{
+    content: "";
+    width: 40px;
+    height: 5px;
+    display: block;
+    margin: 20px auto;
+    background-color:rgb(120, 67, 233);
+    border-radius: 3px;
+}
+
+.about_me_info2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: baseline;
+    column-gap: 50px;
+}
+
+.info_left h3, .info_right h3{
+    font-size: 26px;
+    margin-bottom: 40px;
+}
+.info_left p{
+    color: rgb(93, 93, 87);
+    line-height: 32px;
+    font-weight: 500;
+}
+.info_left span, .info_left a{
+    font-weight: 600;
+}
+.info_left a{
+    color: rgb(120, 67, 233);
+}
+.info_left button, .pro_des button, .contact_form form button{
+    margin-top: 50px;
+    padding: 16px 64px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+.info_left button:hover, .pro_des button:hover, .contact_form form button:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.info_right_skills{
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    gap: 16px;
+}
+.info_right_skills span{
+    display: inline-block;
+    background-color: rgb(231, 231, 231);
+    padding: 16px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(125, 125, 118);
+}
+
+/* project start from here */
+
+.project{
+    background-color: rgb(255, 255, 255);
+}
+.pro_info p, .contact p{
+    font-size: 20px;
+    line-height: 32px;
+    color: rgb(51, 51, 51);
+    text-align: center;
+}
+.contact p{
+    padding-bottom: 80px;
+}
+
+.pro_more_info{
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+.pro_final_info{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 80px;
+}
+
+.pro_des h4{
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+
+.pro_des p{
+    font-size: 18px;
+    line-height: 32px;
+    color: rgb(61, 60, 60);
+    padding-bottom: 30px;
+}
+.pro_des button{
+    margin-top: 0;
+}
+
+/* contact start from here */
+
+.contact{
+    background-image: url(/media/bg\ hero.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact_form{
+    position: relative;
+    width: 750px;
+    margin: 0 auto;
+    padding: 40px 35px;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgba(231, 231, 231, 0.5);
+}
+
+.contact_form form label{
+    display: block;
+    margin: 40px 0 10px 0;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: rgb(111, 111, 102);
+}
+
+.contact_form form label:nth-child(1){
+    margin-top: 0;
+}
+
+.contact_form form input, .contact_form form textarea{
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: rgb(232, 232, 232);
+}
+.contact_form form textarea{
+    resize: none;
+}
+.contact_form form input::placeholder, .contact_form form textarea::placeholder{
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(143, 143, 128);
+}
+
+/* footer start here */
+
+.footer{
+    padding: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+}
+.footer .footer_right{
+    text-align: right;
+}
+
+.right_logo i{
+    font-size: 22px;
+    margin-right: 20px;
+    transition: all 0.3s ease;
+}
+.right_logo i:last-child{
+    margin-right: 0;
+}
+.right_logo i:hover{
+    transform: translateY(-5px);
+    color: rgb(0, 0, 238);
+    cursor: pointer;
+}
+
+
+.footer .para_1{
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+.footer .para_2{
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+}
+
+.copy{
+    padding: 30px 70px;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    border-top: 1px solid rgb(135, 135, 135);
+}
+.copy a{
+    color: white;
+    font-weight: 600;
+}
+
